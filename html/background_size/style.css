@@ -1,0 +1,39 @@
+div > div {
+  background-image: url(anh-nen-4k-anime_062606240.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ccc;
+  border: 1px solid;
+  width: 20em;
+  height: 10em;
+}
+
+div.contain {
+  background-size: contain;
+}
+div.cover {
+  background-size: cover;
+}
+
+div > div {
+  margin: 0 1ex 1ex 0;
+  float: left;
+}
+
+div + div {
+  clear: both;
+  border-top: 1px dashed silver;
+  padding-top: 1ex;
+}
+
+div > div::after {
+  background-color: #000;
+  color: #fefefe;
+  margin: 1ex;
+  padding: 1ex;
+  opacity: 0.8;
+  display: block;
+  width: 10ex;
+  font-size: 0.7em;
+  content: attr(class);
+}

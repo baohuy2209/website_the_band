@@ -6,6 +6,29 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
+/* common */
+.text-while {
+  color: #fff !important;
+}
+.rows {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.columns {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-half {
+  width: 50%;
+}
+.col-third {
+  width: calc(100% / 3);
+}
+.col-full {
+  width: 100%;
+}
+/* Main */
 #main {
 }
 #header {
@@ -75,6 +98,7 @@ html {
 #header .search-btn:hover {
   background-color: red;
 }
+/* About slider */
 #slider {
   margin-top: 46px;
   padding-top: 50%;
@@ -99,6 +123,8 @@ html {
 #content {
   height: 2000px;
 }
+
+/* About section */
 #content .content-section {
   width: 800px;
   margin-left: auto;
@@ -125,6 +151,211 @@ html {
   margin-top: 25px;
   font-size: 15px;
   line-height: 1.4;
+}
+#content .member-list {
+  overflow: hidden;
+  margin-top: 48px;
+}
+#content .member-item {
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+}
+#content .member-name {
+  font-size: 15px;
+}
+#content .member-img {
+  margin-top: 15px;
+  width: 154px;
+  border-radius: 4px;
+}
+.tour-section {
+  background-color: #000;
+}
+.tickets-list {
+  background-color: #fff;
+  margin-top: 40px;
+  list-style: none;
+}
+.tickets-list li {
+  font-size: 15px;
+  color: #757575;
+  padding: 11px 16px;
+  border-bottom: 1px solid #ddd;
+}
+.tickets-list .sold-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+
+.tickets-list .quantity {
+  float: right;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-top: -3px;
+}
+/* Tour place */
+.place-list {
+  overflow: hidden;
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+.place-img {
+  width: 100%;
+  display: block;
+}
+.place-body {
+  background-color: #fff;
+  padding: 16px;
+  font-size: 15px;
+}
+.place-img {
+  border-radius: 4px;
+}
+.place-img:hover {
+  opacity: 0.6;
+}
+.place-heading {
+  font-size: 15px;
+  font-weight: 600;
+}
+.place-time {
+  margin-top: 15px;
+  color: #757575;
+}
+.place-description {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+.place-buy-btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 15px;
+}
+.place-buy-btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal-container {
+  background: #fff;
+  width: 900px;
+  max-width: calc(100% -32px);
+  min-height: 200px;
+  position: relative;
+  transform: translateY(-100px);
+  animation: modalFadeIn ease 0.5s;
+}
+.modal-header {
+  background: #009688;
+  height: 139px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+}
+.modal-header i {
+  margin-right: 15px;
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.modal-close:hover {
+  opacity: 1;
+}
+.modal-body {
+  padding: 16px;
+}
+.modal-label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.modal-input {
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  margin-bottom: 24px;
+}
+#buy-tickets {
+  background-color: #009688;
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 18px;
+  cursor: pointer;
+  color: #fff;
+}
+#buy-tickets:hover {
+  opacity: 0.8;
+}
+.modal-footer {
+  padding: 16px;
+  text-align: right;
+}
+.modal-footer .modal-help a {
+  color: #2196f3;
+  text-decoration: none;
+}
+.open {
+  display: flex;
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-content {
+  margin-top: 48px;
+}
+.contact-information {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.contact-information i {
+  width: 30px;
+  display: inline-block;
+}
+.contact-form {
+  font-size: inherit;
+}
+.contact-form input {
+  padding: 11px;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 #footer {
 }

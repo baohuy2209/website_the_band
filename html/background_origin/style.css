@@ -1,0 +1,17 @@
+.example {
+  width: 300px;
+  border: 20px solid black;
+  padding: 50px;
+  background-image: url(th.jfif);
+  background-repeat: no-repeat;
+  background-color: blanchedalmond;
+}
+
+.example1 {
+}
+.example2 {
+  background-origin: border-box;
+}
+.example3 {
+  background-origin: content-box;
+}
