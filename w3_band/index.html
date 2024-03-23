@@ -11,7 +11,9 @@
     />
   </head>
   <body>
+    <!--Begin main-->
     <div id="main">
+      <!--Begin header-->
       <div id="header">
         <ul id="nav">
           <li><a href="">Home</a></li>
@@ -34,14 +36,16 @@
         </ul>
         <div class="search-btn"><i class="ti-search"></i></div>
       </div>
-
+      <!--End header-->
+      <!--Begin slider-->
       <div id="slider">
         <div class="text-content">
           <div class="text-heading"><b>New York</b></div>
           <p class="text-description">The atmosphere in New York</p>
         </div>
       </div>
-
+      <!--End slider-->
+      <!--Begin content-->
       <div id="content">
         <!-- About section -->
         <div class="content-section">
@@ -193,18 +197,33 @@
                     />
                   </div>
                 </div>
-                <input type="submit" value="SEND" />
+                <input class="btn-submit" type="submit" value="SEND" />
               </form>
             </div>
           </div>
         </div>
-
-        <!---->
-        <div class="content-section"></div>
+        <div class="map-section">
+          <img src="./assets/img/footer/map.jpg" alt="Map" />
+        </div>
       </div>
-      <div id="footer"></div>
+      <!--End Content-->
+      <!--Begin footer-->
+      <div id="footer">
+        <div class="social-list">
+          <a class="social-list-icon" href="#"><i class="ti-facebook"></i></a
+          ><a class="social-list-icon" href="#"><i class="ti-instagram"></i></a
+          ><a class="social-list-icon" href="#"><i class="ti-github"></i></a
+          ><a class="social-list-icon" href="#"
+            ><i class="ti-pinterest-alt"></i></a
+          ><a class="social-list-icon" href="#"><i class="ti-twitter"></i></a
+          ><a class="social-list-icon" href="#"><i class="ti-linkedin"></i></a>
+        </div>
+        <p class="copyright">Powered by <a href="#">w3.css</a></p>
+      </div>
+      <!--end footer-->
     </div>
-
+    <!--End main-->
+    <!--Begin Modal-->
     <div class="modal js-modal">
       <div class="modal-container js-modal-container">
         <div class="modal-close js-modal-close">
@@ -244,6 +263,7 @@
         </footer>
       </div>
     </div>
+    <!--End modal-->
     <script>
       const buyBtns = document.querySelectorAll(".js-buy-ticket");
       const modal = document.querySelector(".js-modal");

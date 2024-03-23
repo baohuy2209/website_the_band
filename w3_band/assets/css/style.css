@@ -120,9 +120,6 @@ html {
 #slider .text-description {
   margin-top: 15px;
 }
-#content {
-  height: 2000px;
-}
 
 /* About section */
 #content .content-section {
@@ -351,11 +348,47 @@ html {
 }
 .contact-form {
   font-size: inherit;
+  margin-bottom: 32px;
 }
-.contact-form input {
+.contact-form .form-control {
   padding: 11px;
   border: 1px solid #ccc;
   width: 100%;
+  margin-bottom: 16px;
+}
+.contact-form .btn-submit {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+  float: right;
+}
+/* map-section */
+.map-section {
+  width: 100%;
 }
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+.social-list {
+  font-size: 24px;
+}
+
+.social-list a {
+  color: rgba(0, 0, 0, 0.6);
+  margin-right: 8px;
+  text-decoration: none;
+}
+.social-list a:hover {
+  opacity: 0.3;
+}
+
+.copyright {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.copyright a {
+  color: rgba(0, 0, 0, 0.6);
 }
