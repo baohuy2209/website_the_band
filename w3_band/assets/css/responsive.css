@@ -1,0 +1,57 @@
+@media (min-width: 768px) {
+  #header .menu-btn {
+    display: none;
+  }
+}
+@media (max-width: 740px) {
+  #nav {
+    display: block;
+  }
+  #nav > li {
+    display: block;
+  }
+  #nav li:first-child {
+    display: inline-block;
+  }
+  #nav .subnav {
+    position: initial;
+    background-color: #333;
+  }
+  #nav .subnav a {
+    color: #fff;
+    padding: 0 32px;
+  }
+  #header {
+    overflow: hidden;
+  }
+  #header .search-btn {
+    display: none;
+  }
+  #header .menu-btn {
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #content .member-item {
+    width: 100%;
+    margin-top: 30px;
+  }
+  #content .member-img {
+    width: 60%;
+  }
+  .place-item {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .contact-information {
+    width: 100%;
+  }
+  .contact-form {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .btn-submit {
+    width: 100%;
+  }
+}

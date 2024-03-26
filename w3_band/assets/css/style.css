@@ -6,7 +6,7 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
-/* common */
+/* common class*/
 .text-while {
   color: #fff !important;
 }
@@ -35,7 +35,6 @@ html {
   height: 46px;
   background-color: #000;
   border-radius: 16px;
-  margin-top: 12px;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -86,6 +85,7 @@ html {
 #nav .nav-arrow-down {
   font-size: 10px;
 }
+#header .menu-btn,
 #header .search-btn {
   width: 62.5;
   color: white;
@@ -94,6 +94,10 @@ html {
   padding: 0 16px;
   box-sizing: border-box;
   cursor: pointer;
+}
+#header .menu-btn:hover {
+  background-color: #ccc;
+  color: #000;
 }
 #header .search-btn:hover {
   background-color: red;
@@ -124,9 +128,15 @@ html {
 /* About section */
 #content .content-section {
   width: 800px;
+  max-width: 100%; /* fix bug on tablet*/
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0;
+  padding: 64px 0 112px;
+  /*
+  fix bug on tablet 
+  */
+  padding-left: 16px;
+  padding-right: 16px;
 }
 #content .section-heading {
   font-size: 30px;

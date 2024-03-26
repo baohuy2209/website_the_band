@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
       rel="stylesheet"
       href="./assets/font/themify-icons/themify-icons.css"
@@ -16,12 +17,12 @@
       <!--Begin header-->
       <div id="header">
         <ul id="nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">Band</a></li>
-          <li><a href="">Tour</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#band">Band</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li>
-            <a href="">
+            <a href="#">
               More
               <i class="nav-arrow-down ti-angle-down"></i>
             </a>
@@ -35,6 +36,7 @@
           </li>
         </ul>
         <div class="search-btn"><i class="ti-search"></i></div>
+        <div class="menu-btn"><i class="ti-menu"></i></div>
       </div>
       <!--End header-->
       <!--Begin slider-->
@@ -49,7 +51,7 @@
       <div id="content">
         <!-- About section -->
         <div class="content-section">
-          <h2 class="section-heading">The Band</h2>
+          <h2 id="band" class="section-heading">The Band</h2>
           <p class="section-subheading">We love music</p>
           <p class="about-text">
             We have created a fictional band website. Lorem ipsum dolor sit
@@ -94,7 +96,7 @@
         <!--Tour section-->
         <div class="tour-section">
           <div class="content-section">
-            <h2 class="section-heading text-while">Tour Dates</h2>
+            <h2 id="tour" class="section-heading text-while">Tour Dates</h2>
             <p class="section-subheading text-while">We love music</p>
             <ul class="tickets-list">
               <li>September <span class="sold-out">Sold out</span></li>
@@ -102,7 +104,7 @@
               <li>November <span class="quantity">3</span></li>
             </ul>
             <div class="rows place-list">
-              <div class="columns col-third">
+              <div class="place-item columns col-third">
                 <img
                   src="./assets/img/tour_place/new-york.jfif"
                   alt="New York"
@@ -119,7 +121,7 @@
                   </button>
                 </div>
               </div>
-              <div class="columns col-third">
+              <div class="place-item columns col-third">
                 <img
                   src="./assets/img/tour_place/paris.jfif"
                   alt="New York"
@@ -136,7 +138,7 @@
                   </button>
                 </div>
               </div>
-              <div class="columns col-third">
+              <div class="place-item columns col-third">
                 <img
                   src="./assets/img/tour_place/san-francisco.jfif"
                   alt="New York"
@@ -159,7 +161,7 @@
 
         <!--Contact section-->
         <div class="content-section">
-          <h2 class="section-heading">Contact</h2>
+          <h2 id="contact" class="section-heading">Contact</h2>
           <p class="section-subheading">Fan? Drop a note!</p>
           <div class="rows contact-content">
             <div class="columns col-half contact-information">
@@ -283,6 +285,32 @@
       modalContainer.addEventListener("click", function (event) {
         event.stopPropagation();
       });
+      var header = document.getElementById("header");
+      var height = header.clientHeight;
+      var mobileMenu = document.querySelector(".menu-btn");
+      mobileMenu.onclick = function () {
+        var isClose = header.clientHeight === height;
+        if (isClose) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = "46px";
+        }
+      };
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+
+        menuItem.onclick = function (e) {
+          var isParent =
+            menuItem.nextElementSibling &&
+            menuItem.nextElementSibling.classList.contains("subnav");
+          if (!isParent) {
+            header.style.height = null;
+          } else {
+            e.preventDefault();
+          }
+        };
+      }
     </script>
   </body>
 </html>
