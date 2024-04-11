@@ -1,90 +1,120 @@
+/* delete default properties*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/* set up font text */
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* common class*/
+/* text-color is white */
 .text-while {
   color: #fff !important;
 }
+/* set up for rows */
 .rows {
   margin-left: -8px;
   margin-right: -8px;
 }
+/* set up for columns */
 .columns {
   float: left;
   padding-left: 8px;
   padding-right: 8px;
 }
+/* 2 columns  */
 .col-half {
   width: 50%;
 }
+/* 3 columns */
 .col-third {
   width: calc(100% / 3);
 }
+/* 1 columns */
 .col-full {
   width: 100%;
 }
 /* Main */
 #main {
 }
+/* css heder */
 #header {
+  /* height : 46px */
   height: 46px;
+  /* background color is black */
   background-color: #000;
-  border-radius: 16px;
+  /* set position sticky to create a fixed header. This header is static when scroll down */
   position: sticky;
+  /* set index  */
   top: 0;
+  /* set z-index.The header is on high class */
   z-index: 1;
 }
 
 #nav {
+  /* to display all nav-item in line */
   display: inline-block;
 }
-
+/* selctor all li tag in <ul> tag */
 #nav li {
+  /* set properties relative to display subnav */
   position: relative;
   display: inline-block;
 }
-
+/* select all <a> tag is directly child of <li>, and <li> is directly child of <ul> */
 #nav > li > a {
   color: #fff;
   text-transform: uppercase;
 }
 #nav li a {
+  /* text-color is white */
   color: white;
+  /* to delete underline of text */
   text-decoration: none;
+  /* height of lines */
   line-height: 40px;
   padding: 0 24px;
   display: inline-block;
 }
+/* when hover on nav-item, reset the color-text and background */
 #nav .subnav li:hover a,
 #nav > li:hover > a {
   color: #000;
   background-color: #ccc;
 }
+/* select subnav */
 #nav .subnav {
+  /* hidden this subnav when don't hover */
   display: none;
+  /* set position */
   position: absolute;
+  /* initial minimum width */
   min-width: 160px;
+  /* initial index */
   top: 100%;
   left: 0;
+  /* set background color */
   background-color: #fff;
+  /* set box-shadow at bottom of subnav */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+/* selection subnav-item */
 #nav .subnav a {
   color: #000;
   padding: 0 12px;
 }
+/* hover on "More", display the subnav */
 #nav li:hover .subnav {
   display: block;
   width: 100%;
 }
+/* css for icon arrow-down */
 #nav .nav-arrow-down {
   font-size: 10px;
 }
+/* css for menu button and search button */
 #header .menu-btn,
 #header .search-btn {
   width: 62.5;
@@ -95,10 +125,12 @@ html {
   box-sizing: border-box;
   cursor: pointer;
 }
+/* css when hover on menu button */
 #header .menu-btn:hover {
   background-color: #ccc;
   color: #000;
 }
+/* css when hover on search button */
 #header .search-btn:hover {
   background-color: red;
 }
@@ -106,18 +138,22 @@ html {
 #slider {
   margin-top: 46px;
   padding-top: 50%;
+  /* set this position to initial index of text-content*/
   position: relative;
   border-radius: 12px;
   background: url("/assets/img/slider/slider2.jpg") top center / cover no-repeat;
 }
 #slider .text-content {
+  /* selection parant tag to set coordinate */
   position: absolute;
   bottom: 47px;
   color: #fff;
+  /* set value center for text-content */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
+/* create distance between text-heading and text-description */
 #slider .text-heading {
   margin-bottom: 10px;
 }
@@ -131,6 +167,7 @@ html {
   max-width: 100%; /* fix bug on tablet*/
   margin-left: auto;
   margin-right: auto;
+  /* set padding top and bottom */
   padding: 64px 0 112px;
   /*
   fix bug on tablet 
